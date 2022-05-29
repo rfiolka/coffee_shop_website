@@ -13,8 +13,8 @@
 <div class="circle"></div>
      <header>
          <a href="#"><img src="./img/logo.png" class="logo"></a>
-         <div class="toggle"></div>
-         <ul>
+         <div class="toggle" onclick="toggleMenu()"></div>
+         <ul class="navigation">
             <li><a href="#">Home</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">What's new</a></li>
@@ -23,7 +23,7 @@
      </header>
 <div class="content">
 <div class="textBox">
-    <h2>It's not just Coffee<br> It's <span> Special coffee</span></h2>
+    <h2>It's not just drink<br> It's <span> Special drink</span></h2>
 <p>
     Random text
 </p>
@@ -35,9 +35,9 @@
 </div>
 </div>
 <ul class="thumb">
-<li><img src="./img/thumb1.png" onclick="imgSlider('./img/img1.png');changeCircleColor('#017143')"></li>
-<li><img src="./img/thumb2.png" onclick="imgSlider('./img/img2.png');changeCircleColor('#eb7495')"></li>
-<li><img src="./img/thumb3.png" onclick="imgSlider('./img/img3.png');changeCircleColor('#d752b1')"></li>
+<li><img src="./img/thumb1.png" onclick="imgSlider('./img/img1.png');changeCircleColor('#f3dfba')"></li>
+<li><img src="./img/thumb2.png" onclick="imgSlider('./img/img2.png');changeCircleColor('#017143')"></li>
+<li><img src="./img/thumb3.png" onclick="imgSlider('./img/img3.png');changeCircleColor('#d69721')"></li>
 </ul>
 <ul class="sci">
 <li><a href="#"><img src="./img/facebook.png"></a></li>
@@ -54,6 +54,14 @@
      function changeCircleColor(color){
          const circle = document.querySelector('.circle');
          circle.style.background = color;
+     }
+
+     function toggleMenu(){
+         var menuToggle = document.querySelector('.toggle');
+         var navigation = document.querySelector('.navigation')
+         menuToggle.classList.toggle('active')
+         navigation.classList.toggle('active')
+
      }
  </script>
 </body>
